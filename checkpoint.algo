@@ -1,0 +1,28 @@
+ALGORITHM favour_Algo
+VAR
+    sentence : STRING;
+    i:INTEGER:=0;
+    word : INTEGER := 1;
+    vowels : INTEGER :=0;
+    lchar : INTEGER :=1;
+BEGIN
+    Read(sentence)
+    WHILE (sentence[i] != "." ) DO
+        lchar= lchar+1
+        IF(sentence[i]=" ")THEN
+            word:= word+1
+        END_IF
+        SWITCH (sentence[i]) DO
+            case "a" : 
+            case "e" : 
+            case "i" : 
+            case "o" : 
+            case "u" : vowels := vowels + 1 break
+            END_SWITCH
+        i=i+1
+    END_WHILE
+    Write(sentence)
+    Write(word)
+    Write(vowels)
+    Write(lchar)
+END
